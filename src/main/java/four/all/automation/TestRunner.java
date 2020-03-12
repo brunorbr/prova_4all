@@ -28,25 +28,3 @@ public class TestRunner {
         runChallengeSuite();
     }
 }
-/*
-public class RunJUnit5TestsFromJava {
-    SummaryGeneratingListener listener = new SummaryGeneratingListener();
-
-    public void runOne() {
-        LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
-                .selectors(selectClass(FirstUnitTest.class))
-                .build();
-        Launcher launcher = LauncherFactory.create();
-        TestPlan testPlan = launcher.discover(request);
-        launcher.registerTestExecutionListeners(listener);
-        launcher.execute(request);
-    }
-    // main method...
-
-    ublic static void main(String[] args) {
-        RunJUnit5TestsFromJava runner = new RunJUnit5TestsFromJava();
-        runner.runAll();
-
-        TestExecutionSummary summary = runner.listener.getSummary();
-        summary.printTo(new PrintWriter(System.out));
-    }*/
