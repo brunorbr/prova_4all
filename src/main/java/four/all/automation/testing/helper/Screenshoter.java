@@ -1,4 +1,4 @@
-package helper;
+package four.all.automation.testing.helper;
 
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.ashot.AShot;
@@ -28,11 +28,15 @@ public class Screenshoter {
         this.timeStampFileName = setTimestamp();
     }
 
-    public void writeFile() throws IOException {
+    public void writeFile(){
         setFileName();
-        ImageIO.write(
-                screenshot.getImage(),
-                "jpg",
-                new File("\\testscreenshots\\"+ timeStampFileName + ".jpg"));
+        try {
+            ImageIO.write(
+                    screenshot.getImage(),
+                    "jpg",
+                    new File(".\\testscreenshots\\"+ timeStampFileName + ".jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
