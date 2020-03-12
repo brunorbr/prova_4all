@@ -10,10 +10,10 @@ public class PurchaseConfirmationModal extends PageObject {
     }
 
     @FindBy(xpath = "//button[@class='close-modal sc-jqCOkK ippulb']")
-    WebElement closeButton;
+    public WebElement closeButton;
 
     @FindBy(xpath = "//h2[@class='sc-dNLxif jyncPa']")
-    WebElement confirmationBox;
+    public WebElement confirmationBox;
 
     public String getText(){
         return confirmationBox.getText();

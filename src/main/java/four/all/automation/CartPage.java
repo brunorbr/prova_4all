@@ -21,6 +21,9 @@ public class CartPage extends PageObject {
     @FindBy(id = "finish-checkout-button")
     public WebElement confirmPurchaseButton;
 
+    @FindBy(id = "price-total-checkout")
+    public WebElement totalPrice;
+
     public void addRemoveItem(WebElement ammountButtons){
         ammountButtons.click();
     }
@@ -28,6 +31,10 @@ public class CartPage extends PageObject {
     public PurchaseConfirmationModal confirmPurchase(){
         confirmPurchaseButton.click();
         return new PurchaseConfirmationModal(driver);
+    }
+
+    public String getTotalPrice(){
+        return totalPrice.getText();
     }
 
 }

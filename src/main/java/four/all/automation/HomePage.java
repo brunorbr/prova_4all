@@ -11,15 +11,18 @@ import java.util.List;
 public class HomePage extends PageObject {
 
     @FindBy(id = "open-categories-btn")
-    WebElement dropdownButton;
+    public WebElement dropdownButton;
+
+    @FindBy(id = "add-product-3-btn")
+    public WebElement rissolesButton;
 
     @FindAll({
             @FindBy(xpath = "//button[contains(text(), 'Adicionar')]")
     })
-    List<WebElement> allItemsAddButton;
+    public List<WebElement> allItemsAddButton;
 
     @FindBy(id = "cart-btn")
-    WebElement cartButton;
+    public WebElement cartButton;
 
     public HomePage(WebDriver driver){
         super(driver);
